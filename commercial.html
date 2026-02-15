@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Videos – Lobster Thieved</title>
+  <link rel="stylesheet" href="css.css">  <!-- Reuse your existing CSS file -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Reuse your navbar (copy from index.html) -->
+  <nav>
+    <a href="index.html" class="logo">  <!-- Link back to home -->
+      <img src="content_images/lobster-logo.png" alt="LobsterThieved – Cinematic Production Logo" class="logo-img">
+    </a>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html#narrative">NARRATIVE</a></li>
+      <li><a href="index.html#videos">MUSIC VIDEOS</a></li>
+      <li><a href="index.html#commercial">COMMERCIAL</a></li>
+      <li><a href="index.html#about">ABOUT</a></li>
+      <li><a href="index.html#contact">CONTACT</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main content: stacked YouTube videos -->
+  <main style="padding-top: 100px; background: #000; min-height: 100vh;">  <!-- padding-top prevents overlap with fixed nav -->
+
+    <section class="video-section">
+      <h2 style="text-align: center; font-size: clamp(2.5rem, 6vw, 4rem); margin: 3rem 0 2rem; color: #fff;">Featured Videos</h2>
+
+      <!-- Video 1 -->
+      <div class="video-wrapper">
+        <h3>Video Title 1</h3>
+        <div class="video-container">
+          <iframe 
+            src="https://youtu.be/kvL2C3KD0m8?si=LXlGFGfmytqIyQmI" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" 
+            allowfullscreen>
+          </iframe>
+        </div>
+        <p style="text-align: center; margin-top: 1rem; color: #ccc;">Short description or credits here.</p>
+      </div>
+
+      <!-- Video 2 -->
+      <div class="video-wrapper">
+        <h3>Video Title 2</h3>
+        <div class="video-container">
+          <iframe 
+            src="https://youtu.be/V9Opl1hqYEc?si=w81Ut1b22EHaS3aB" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" 
+            allowfullscreen>
+          </iframe>
+        </div>
+        <p style="text-align: center; margin-top: 1rem; color: #ccc;">Short description or credits here.</p>
+      </div>
+
+      <!-- Video 3 -->
+      <div class="video-wrapper">
+        <h3>Video Title 3</h3>
+        <div class="video-container">
+          <iframe 
+            src="https://youtu.be/Ma7KJ7c6YWY?si=SkwcL8CJAX0rPIgv" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" 
+            allowfullscreen>
+          </iframe>
+        </div>
+        <p style="text-align: center; margin-top: 1rem; color: #ccc;">Short description or credits here.</p>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- Optional: Reuse footer -->
+  <footer>
+    <!-- your existing footer code here -->
+  </footer>
+
+  <!-- Hamburger script (copy from your index.html) -->
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      hamburger.classList.toggle('active');
+    });
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        hamburger.classList.remove('active');
+      });
+    });
+  </script>
+
+</body>
+</html>
