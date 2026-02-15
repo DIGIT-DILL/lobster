@@ -725,12 +725,10 @@ footer {
 .video-container {
   position: relative;
   width: 100%;
-  max-width: 1200px;           /* Optional: cap max width on large screens */
-  margin: 0 auto 3rem auto;
+  max-width: 100%px;           /* Optional: cap max width on large screens */
   padding-top: 56.25%;         /* 9/16 = 56.25% → perfect 16:9 */
   overflow: hidden;
   background: #111;            /* Dark placeholder while loading */
-  border-radius: 12px;
   box-shadow: 0 12px 40px rgba(0,0,0,0.6);
 }
 
@@ -744,26 +742,35 @@ footer {
 }
 
 .video-wrapper {
-  padding: 0 5%;
-  max-width: 1400px;
-  margin: 0 auto;
+  width: 100%;
+  max-width: 100%;                /* Ensures no capping */
 }
 
-.video-wrapper h3 {
-  font-size: clamp(1.8rem, 4vw, 2.8rem);
-  text-align: center;
-  margin-bottom: 1rem;
-  color: #fff;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+.video-container {
+  position: relative;
+  width: 100%;                    /* Full width of parent */
+  padding-top: 56.25%;            /* 9/16 = 56.25% for 16:9 aspect ratio */
+  overflow: hidden;
+  background: #111;               /* Dark placeholder color */
+  border-radius: 12px;            /* Optional rounded corners */
+  box-shadow: 0 12px 40px rgba(0,0,0,0.6); /* Cinematic shadow */
 }
 
-/* Mobile tweaks */
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;         /* Force full width */
+  height: 100% !important;        /* Force full height */
+  border: none;
+}
+
+/* Mobile adjustments (optional) */
 @media (max-width: 768px) {
-  .video-section {
-    padding: 2rem 0;
-  }
   .video-wrapper {
-    padding: 0 3%;
+    margin-bottom: 3rem;
+  }
+  .video-container {
+    border-radius: 8px;
   }
 }
