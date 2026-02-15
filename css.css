@@ -521,11 +521,11 @@ button:hover {
   align-items: center;
   gap: 0.5rem;
   opacity: 0.85;
-  transition: opacity 0.3s, transform 0.3s;
+  transition: opacity 0.3s ease, transform 0.3s ease;
   z-index: 3;
 }
 
-/* Hover ONLY exists on devices that support proper hover (mouse / trackpad) */
+/* Desktop hover only (real mouse devices) */
 @media (hover: hover) and (pointer: fine) {
   .back-to-top:hover {
     opacity: 1;
@@ -533,25 +533,27 @@ button:hover {
   }
 }
 
+/* Mobile styles */
 @media (max-width: 768px) {
-  .back-to-top:hover,
-  .back-to-top:focus-visible {  /* also catch any focus/hover bleed */
-    opacity: 0.85 !important;
-    transform: none !important;
-    transition: none !important;  /* kill animation during tap */
-  }
-
-  /* Keep your positioning */
   .back-to-top {
     right: 50%;
-    transform: translateX(50%);
     bottom: 2rem;
+    transform: translateX(50%);
+    
+    /* Remove transform animation to prevent shifting */
+    transition: opacity 0.3s ease;
   }
 
-  /* Optional subtle tap feedback (better than hover flash) */
+  /* Prevent hover/focus bleed on touch */
+  .back-to-top:hover,
+  .back-to-top:focus-visible {
+    opacity: 0.85 !important;
+    transform: translateX(50%) !important;
+  }
+
+  /* Optional tap feedback (opacity only, no movement) */
   .back-to-top:active {
     opacity: 1;
-    transform: translateY(0);
   }
 }
 
