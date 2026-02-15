@@ -764,10 +764,4 @@ footer {
 
 /* Mobile adjustments (optional) */
 @media (max-width: 768px) {
-  .video-wrapper {
-    margin-bottom: 3rem;
-  }
-  .video-container {
-    border-radius: 8px;
-  }
 }
