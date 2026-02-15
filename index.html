@@ -195,5 +195,43 @@
     });
   </script>
 
+
+<script>
+// Double-tap to navigate on mobile for hero links
+document.addEventListener('DOMContentLoaded', function() {
+  // Target your hero links (adjust selector if needed)
+  const heroLinks = document.querySelectorAll('.hero-link');
+
+  heroLinks.forEach(link => {
+    let lastTap = 0;
+    const doubleTapDelay = 300; // ms window for double-tap (adjust if needed)
+
+    link.addEventListener('touchend', function(e) {
+      const currentTime = new Date().getTime();
+      const tapLength = currentTime - lastTap;
+
+      if (tapLength < doubleTapDelay && tapLength > 0) {
+        // It's a double-tap → allow navigation
+        // We don't preventDefault here so the browser follows <a href>
+      } else {
+        // Single tap → prevent navigation, but allow visual feedback
+        e.preventDefault();           // Stops immediate navigation
+        e.stopPropagation();          // In case of bubbling issues
+
+        // Optional: Add a visual "first tap" indicator (e.g. highlight)
+        link.classList.add('hero-tapped');
+        setTimeout(() => {
+          link.classList.remove('hero-tapped');
+        }, 400); // Remove after short time
+      }
+
+      lastTap = currentTime;
+    }, { passive: false }); // passive:false needed to allow preventDefault on touchend
+  });
+});
+</script>
+
+
+
 </body>
 </html>
