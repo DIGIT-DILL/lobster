@@ -14,7 +14,7 @@ body {
 /* Navbar */
 /* Make nav fixed at all times — it will overlay content */
 nav {
-  position: fixed !important;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
