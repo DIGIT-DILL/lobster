@@ -189,17 +189,37 @@ nav {
   display: block;
 }
 
+/* Default overlay */
+/* Default overlay for all devices */
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.4);
+  background: rgba(0,0,0,0.4); /* light base */
   transition: background 0.5s ease;
   z-index: 1;
 }
 
-.hero:hover .hero-overlay {
-  background: rgba(0,0,0,0.75);
+/* Desktop: gradient overlay on hover */
+@media (hover: hover) and (pointer: fine) {
+  .hero-link:hover .hero-overlay,
+  .hero:hover .hero-overlay {
+    background: linear-gradient(
+      to top,
+      rgba(0,0,0,0.75) 0%,  /* dark at bottom */
+      rgba(0,0,0,0.15) 50%, /* semi-transparent middle */
+      rgba(0,0,0,0.0) 70%   /* fully transparent top */
+    );
+  }
 }
+
+/* Mobile: full overlay on hover/tap */
+@media (hover: none) {
+  .hero:hover .hero-overlay,
+  .hero-link:active .hero-overlay {
+    background: rgba(0,0,0,0.75); /* full dark for readability */
+  }
+}
+
 
 .hero-content {
   position: absolute;
@@ -310,10 +330,6 @@ nav {
 }
 
 /* Optional: improve hover/focus feedback for the whole card */
-.hero-link:hover .hero-overlay,
-.hero-link:focus .hero-overlay {
-  background: rgba(0,0,0,0.75);   /* or whatever darker value you prefer */
-}
 
 /* Make sure focus is visible (good for keyboard users) */
 .hero-link:focus {
@@ -424,7 +440,7 @@ nav {
   }
 
   .about-image-wrapper {
-      flex: 0 0 240px;
+    flex: 0 0 240px;
     padding-left: 14%;  
     padding-right: 14%;  
     padding-bottom: 0%;
