@@ -38,19 +38,25 @@ nav {
 
 /* Mobile adjustments */
 @media (max-width: 768px) {
+
+  /* Keep nav overlaying hero */
   nav {
     padding: 1rem 5%;
     flex-wrap: wrap;
   }
 
-  /* Push first hero section down so nav doesn't cover the image/content */
-  .hero#narrative,
+  /* Remove any top padding from hero itself */
   .hero:first-of-type {
-    padding-top: 90px;          /* ← adjust this value if needed (80–110px) */
-    margin-top: 0;
+    padding-top: 0 !important;
+    margin-top: 0 !important;
   }
 
-  .hamburger {
+  /* Push ONLY the content down below the nav */
+  .hero:first-of-type .hero-content {
+    margin-top: 90px; /* Adjust if your nav height changes */
+  }
+
+    .hamburger {
     display: flex;
   }
 
@@ -67,7 +73,9 @@ nav {
   .nav-links.active {
     display: flex;
   }
+
 }
+
 
 /* Desktop – nav overlays hero, no top padding needed */
 @media (min-width: 769px) {
@@ -169,7 +177,7 @@ nav {
   position: relative;
   width: 100%;
   height: 100vh;
-  min-height: 700px;
+  min-height: 10px;
   overflow: hidden;
 }
 
@@ -841,4 +849,32 @@ footer {
 
 /* Mobile adjustments (optional) */
 @media (max-width: 768px) {
+}
+
+
+/* Hide mobile duplicate by default */
+.mobile-hero-top {
+  display: none;
+}
+
+/* Show only on mobile */
+@media (max-width: 768px) {
+  .mobile-hero-top {
+    display: block;
+  }
+
+  /* Optional: adjust height for mobile so it's just a top crop */
+  .mobile-hero-top .hero-image {
+    width: 500px;
+    height: 73px;
+    object-fit: cover;
+    object-position: center top;
+  }
+
+  .mobile-hero-top .hero-content {
+    bottom: 10px;  /* make text sit nicely on top of cropped image */
+    left: 5%;
+    max-width: 90%;
+    font-size: clamp(0.8rem, 4vw, 1rem);
+  }
 }
