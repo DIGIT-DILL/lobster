@@ -496,7 +496,7 @@ button {
   background: transparent;
   color: #fff;
   border: 2px solid #fff;
-  border-radius: 50px;
+  border-radius: 0px;
   cursor: pointer;
   transition: all 0.3s;
   align-self: flex-start;
@@ -505,6 +505,58 @@ button {
 button:hover {
   background: rgba(255,255,255,0.12);
   transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+
+  #contact {
+    min-height: 600px;
+    padding: 4rem 6% 8rem;
+  }
+
+  .contact-content {
+    padding: 4rem 6% 8rem;
+    justify-content: flex-start;
+  }
+
+  .contact-content h2 {
+    font-size: clamp(2.4rem, 8vw, 3.8rem);
+    text-align: left;
+  }
+
+  /* Center form elements horizontally */
+  #contact form {
+    align-items: center;
+  }
+
+  /* Keep inputs full width */
+  #contact input,
+  #contact textarea {
+    width: 100%;
+  }
+
+  /* Center the submit button only */
+  #contact form button {
+    align-self: center;
+  }
+
+  /* Keep Back to Top centered */
+  .back-to-top {
+    right: 50%;
+    transform: translateX(50%);
+    bottom: 2rem;
+    transition: opacity 0.3s ease;
+  }
+
+  .back-to-top:hover,
+  .back-to-top:focus-visible {
+    opacity: 0.85 !important;
+    transform: translateX(50%) !important;
+  }
+
+  .back-to-top:active {
+    opacity: 1;
+  }
 }
 
 
