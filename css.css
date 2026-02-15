@@ -293,6 +293,28 @@ nav {
   }
 }
 
+.hero-link {
+  display: block;           /* makes the link fill its container */
+  text-decoration: none;    /* remove default underline */
+  color: inherit;           /* keep text color from children */
+}
+
+/* Optional: improve hover/focus feedback for the whole card */
+.hero-link:hover .hero-overlay,
+.hero-link:focus .hero-overlay {
+  background: rgba(0,0,0,0.75);   /* or whatever darker value you prefer */
+}
+
+/* Make sure focus is visible (good for keyboard users) */
+.hero-link:focus {
+  outline: none;   /* remove default outline if you want custom style */
+}
+
+.hero-link:focus .hero-content {
+  /* Optional: add some focus indicator, e.g. */
+  text-shadow: 0 0 0 4px rgba(255,255,255,0.4);
+}
+
 #about {
   background: #000;
   color: #fff;
