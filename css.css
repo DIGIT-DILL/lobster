@@ -865,7 +865,7 @@ footer {
 
   /* Optional: adjust height for mobile so it's just a top crop */
   .mobile-hero-top .hero-image {
-    width: 500px;
+    width: 200px;
     height: 65px;
     object-fit: cover;
     object-position: center top;

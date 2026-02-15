@@ -53,11 +53,18 @@
 <a href="narrative.html" class="hero-link">
   <header class="hero" id="narrative">
     <div class="hero-overlay"></div>
-    <img
-      src="content_images/james-cinematic-photo.jpg"
-      alt="Dramatic empty boxing ring with blue lighting and smoke"
-      class="hero-image"
-    >
+    
+    <picture>
+      <!-- Mobile-first: loads on small screens (e.g. phones) -->
+      <source media="(max-width: 767px)" 
+              srcset="content_images/james-cinematic-mobile.png">
+      
+      <!-- Desktop/tablet: default image -->
+      <img src="content_images/james-cinematic-photo.jpg"
+           alt="Dramatic empty boxing ring with blue lighting and smoke"
+           class="hero-image">
+    </picture>
+    
     <div class="hero-content">
       <h1>NARRATIVE</h1>
       <p>VIEW FEATURED SHORT FILMS</p>
@@ -65,15 +72,19 @@
   </header>
 </a>
 
-<!-- Music Videos Hero -->
+<!-- Music Videos Hero – same pattern -->
 <a href="music-videos.html" class="hero-link">
   <header class="hero" id="videos">
     <div class="hero-overlay"></div>
-    <img
-      src="content_images/corporate-picture.jpg"
-      alt="..."
-      class="hero-image"
-    >
+    
+    <picture>
+      <source media="(max-width: 767px)" 
+              srcset="content_images/music-mobile.png">
+      <img src="content_images/corporate-picture.jpg"
+           alt="..." 
+           class="hero-image">
+    </picture>
+    
     <div class="hero-content">
       <h1>MUSIC VIDEOS</h1>
       <p>VIEW FEATURED MUSIC VIDEOS</p>
@@ -81,22 +92,25 @@
   </header>
 </a>
 
-<!-- Commercial Hero -->
+<!-- Commercial Hero – same pattern -->
 <a href="commercial.html" class="hero-link">
   <header class="hero" id="commercial">
     <div class="hero-overlay"></div>
-    <img
-      src="content_images/drink-ad.jpg"
-      alt="..."
-      class="hero-image"
-    >
+    
+    <picture>
+      <source media="(max-width: 767px)" 
+              srcset="content_images/ad-mobile.png">
+      <img src="content_images/drink-ad.jpg"
+           alt="..." 
+           class="hero-image">
+    </picture>
+    
     <div class="hero-content">
       <h1>COMMERCIAL</h1>
       <p>VIEW FEATURED ADS</p>
     </div>
   </header>
 </a>
-
 
 <!-- About Section -->
 <section id="about">
