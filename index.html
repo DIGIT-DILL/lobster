@@ -197,36 +197,38 @@
 
 
 <script>
-// Double-tap to navigate on mobile for hero links
 document.addEventListener('DOMContentLoaded', function() {
-  // Target your hero links (adjust selector if needed)
   const heroLinks = document.querySelectorAll('.hero-link');
 
   heroLinks.forEach(link => {
     let lastTap = 0;
-    const doubleTapDelay = 1200; // ms window for double-tap (adjust if needed)
+    const doubleTapDelay = 350; // Tight window — feels natural (adjust 300–500)
 
     link.addEventListener('touchend', function(e) {
       const currentTime = new Date().getTime();
       const tapLength = currentTime - lastTap;
 
-      if (tapLength < doubleTapDelay && tapLength > 0) {
-        // It's a double-tap → allow navigation
-        // We don't preventDefault here so the browser follows <a href>
+      if (tapLength < doubleTapDelay && tapLength > 50) {  // >50 avoids accidental ultra-fast taps counting as double
+        // Double-tap on THIS SAME link → allow navigation
+        // No preventDefault() → browser follows <a href>
+        link.classList.remove('hero-tapped'); // Clean up if still highlighted
       } else {
-        // Single tap → prevent navigation, but allow visual feedback
-        e.preventDefault();           // Stops immediate navigation
-        e.stopPropagation();          // In case of bubbling issues
+        // Single tap (or too slow) → block navigation
+        e.preventDefault();
+        e.stopPropagation();
 
-        // Optional: Add a visual "first tap" indicator (e.g. highlight)
+        // Visual feedback only on this link
         link.classList.add('hero-tapped');
         setTimeout(() => {
           link.classList.remove('hero-tapped');
-        }, 400); // Remove after short time
+        }, 600); // Longer fade-out so user sees it was "primed"
+
+        // Optional: if you want to "cancel" after a while without second tap
+        // setTimeout(() => link.classList.remove('hero-tapped'), 2000);
       }
 
       lastTap = currentTime;
-    }, { passive: false }); // passive:false needed to allow preventDefault on touchend
+    }, { passive: false }); // Required for preventDefault to work on touchend
   });
 });
 </script>
