@@ -196,27 +196,6 @@
   </script>
 
 
-document.addEventListener('DOMContentLoaded', () => {
-  if ('IntersectionObserver' in window) {
-    const hero = document.querySelector('.hero');
-    if (!hero) return;
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting && entry.intersectionRatio >= 0.6) {
-          hero.classList.add('is-visible');
-        } else {
-          // optional: remove class when scrolled away
-          // hero.classList.remove('is-visible');
-        }
-      },
-      { threshold: [0.6] } // trigger when ≥60% visible
-    );
-
-    observer.observe(hero);
-  }
-});
-
 
 
 </body>
