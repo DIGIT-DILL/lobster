@@ -198,14 +198,14 @@
 
 <script>
 document.addEventListener('DOMContentLoaded', () => {
-  // Run only on touch/mobile devices
+  // Only run on touch/mobile devices (no real hover)
   if (window.matchMedia("(hover: none)").matches || 'ontouchstart' in window) {
     const heroes = document.querySelectorAll('.hero');
     
     if (!heroes.length) return;
     
     if (!('IntersectionObserver' in window)) {
-      // Very old browser → just show everything
+      // Very old browser fallback → show everything permanently
       heroes.forEach(h => h.classList.add('is-active'));
       return;
     }
@@ -213,17 +213,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach(entry => {
+          const hero = entry.target;
+          
           if (entry.isIntersecting && entry.intersectionRatio >= 0.45) {
-            entry.target.classList.add('is-active');
-            // Uncomment next line if you want text to hide again when scrolled past
-            // } else {
-            //   entry.target.classList.remove('is-active');
+            hero.classList.add('is-active');
+          } else {
+            hero.classList.remove('is-active');
           }
         });
       },
       {
-        threshold: 0.45,
-        rootMargin: '-10% 0px -10% 0px'   // slight shrink → easier to trigger
+        threshold: [0.0, 0.45, 0.7],   // observe at 0%, ~45%, ~70% for smoother transitions
+        rootMargin: '-15% 0px -15% 0px' // slight shrink from top/bottom → feels more natural
       }
     );
 
