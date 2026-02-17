@@ -196,46 +196,40 @@
   </script>
 
 
-
 <script>
-  // Wait for DOM to be ready
-  document.addEventListener('DOMContentLoaded', function () {
-    // Only run this logic on touch / mobile-like devices
-    if (window.matchMedia("(hover: none)").matches || 'ontouchstart' in window) {
-      // Find all hero elements (the <header class="hero"> ones)
-      const heroes = document.querySelectorAll('.hero');
-
-      if (!heroes.length || !('IntersectionObserver' in window)) {
-        // Fallback: if no support or no heroes → show all immediately
-        heroes.forEach(hero => hero.classList.add('is-active'));
-        return;
-      }
-
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach(entry => {
-            const hero = entry.target;
-
-            if (entry.isIntersecting && entry.intersectionRatio >= 0.2) {
-              // 60% or more visible → activate "hover"
-              hero.classList.add('is-active');
-            } else {
-              // Optional: remove when scrolled away (creates reveal on scroll effect)
-              // hero.classList.remove('is-active');
-              // Or keep it once activated (comment out the line above)
-            }
-          });
-        },
-        {
-          threshold: [0.6],           // trigger when ≥60% of hero is visible
-          rootMargin: '0px'           // no extra margin – adjust if needed
-        }
-      );
-
-      // Observe each hero section
-      heroes.forEach(hero => observer.observe(hero));
+document.addEventListener('DOMContentLoaded', () => {
+  // Run only on touch/mobile devices
+  if (window.matchMedia("(hover: none)").matches || 'ontouchstart' in window) {
+    const heroes = document.querySelectorAll('.hero');
+    
+    if (!heroes.length) return;
+    
+    if (!('IntersectionObserver' in window)) {
+      // Very old browser → just show everything
+      heroes.forEach(h => h.classList.add('is-active'));
+      return;
     }
-  });
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting && entry.intersectionRatio >= 0.45) {
+            entry.target.classList.add('is-active');
+            // Uncomment next line if you want text to hide again when scrolled past
+            // } else {
+            //   entry.target.classList.remove('is-active');
+          }
+        });
+      },
+      {
+        threshold: 0.45,
+        rootMargin: '-10% 0px -10% 0px'   // slight shrink → easier to trigger
+      }
+    );
+
+    heroes.forEach(hero => observer.observe(hero));
+  }
+});
 </script>
 
 
