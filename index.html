@@ -216,7 +216,7 @@
           entries.forEach(entry => {
             const hero = entry.target;
 
-            if (entry.isIntersecting && entry.intersectionRatio >= 0.6) {
+            if (entry.isIntersecting && entry.intersectionRatio >= 0.2) {
               // 60% or more visible → activate "hover"
               hero.classList.add('is-active');
             } else {
