@@ -197,6 +197,47 @@
 
 
 
+<script>
+  // Wait for DOM to be ready
+  document.addEventListener('DOMContentLoaded', function () {
+    // Only run this logic on touch / mobile-like devices
+    if (window.matchMedia("(hover: none)").matches || 'ontouchstart' in window) {
+      // Find all hero elements (the <header class="hero"> ones)
+      const heroes = document.querySelectorAll('.hero');
+
+      if (!heroes.length || !('IntersectionObserver' in window)) {
+        // Fallback: if no support or no heroes → show all immediately
+        heroes.forEach(hero => hero.classList.add('is-active'));
+        return;
+      }
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach(entry => {
+            const hero = entry.target;
+
+            if (entry.isIntersecting && entry.intersectionRatio >= 0.6) {
+              // 60% or more visible → activate "hover"
+              hero.classList.add('is-active');
+            } else {
+              // Optional: remove when scrolled away (creates reveal on scroll effect)
+              // hero.classList.remove('is-active');
+              // Or keep it once activated (comment out the line above)
+            }
+          });
+        },
+        {
+          threshold: [0.6],           // trigger when ≥60% of hero is visible
+          rootMargin: '0px'           // no extra margin – adjust if needed
+        }
+      );
+
+      // Observe each hero section
+      heroes.forEach(hero => observer.observe(hero));
+    }
+  });
+</script>
+
 
 </body>
 </html>
