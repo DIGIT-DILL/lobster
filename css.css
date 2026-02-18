@@ -5,12 +5,12 @@
 }
 
 @font-face {
-  font-family: 'Tondu';  /* or whatever name you chose, e.g. 'TekturAlt' */
-  src: url('tondu.woff') format('woff'),
-       url('tondu.woff2')  format('woff2');
-  font-weight: normal;   /* adjust per variant: 400, 700, etc. */
+  font-family: 'Tondu';
+  src: url('fonts/tondu.woff2') format('woff2'),
+       url('fonts/tondu.woff') format('woff');
+  font-weight: normal;
   font-style: normal;
-  font-display: swap;    /* keeps this – prevents invisible text flash */
+  font-display: swap;
 }
 
 body {
