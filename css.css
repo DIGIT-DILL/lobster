@@ -4,8 +4,17 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: 'Tondu';  /* or whatever name you chose, e.g. 'TekturAlt' */
+  src: url('tondu.woff') format('woff'),
+       url('tondu.woff2')  format('woff2');
+  font-weight: normal;   /* adjust per variant: 400, 700, etc. */
+  font-style: normal;
+  font-display: swap;    /* keeps this – prevents invisible text flash */
+}
+
 body {
-  font-family: "Barlow", sans-serif;
+  font-family: "Tondu", sans-serif;
   background-color: #000;
   color: #eee;
   line-height: 1.6;
