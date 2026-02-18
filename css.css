@@ -621,6 +621,13 @@ textarea {
   min-height: 130px;
 }
 
+button,
+input,
+textarea,
+select {
+  font-family: "Tondu", sans-serif;
+}
+
 button {
   margin-top: 1.5rem;
   padding: 1.1rem 3rem;
