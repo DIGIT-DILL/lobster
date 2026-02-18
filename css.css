@@ -6,8 +6,8 @@
 
 @font-face {
   font-family: 'Tondu';
-  src: url('fonts/tondu.woff2') format('woff2'),
-       url('fonts/tondu.woff') format('woff');
+  src: url('tondu.woff2') format('woff2'),
+       url('tondu.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
