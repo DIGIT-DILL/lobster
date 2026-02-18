@@ -14,10 +14,18 @@
 }
 
 body {
-  font-family: "Tondu", sans-serif;
+  font-family: "Barlow", sans-serif;
   background-color: #000;
   color: #eee;
   line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6,
+nav a,
+button,
+.footer-contact,
+.footer-copyright {
+  font-family: "Tondu", sans-serif;
 }
 
 /* Navbar */
@@ -621,11 +629,14 @@ textarea {
   min-height: 130px;
 }
 
-button,
+button {
+  font-family: "Tondu", sans-serif;
+}
+
 input,
 textarea,
 select {
-  font-family: "Tondu", sans-serif;
+  font-family: "Barlow", sans-serif;
 }
 
 button {
