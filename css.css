@@ -1004,30 +1004,43 @@ footer {
   width: 100%;
 }
 
-/* Caption container – always centered */
 .video-caption {
-  text-align: center;           /* core centering for all text inside */
-  padding: 2rem 8% 0;
-  padding-bottom: 2rem;
+  text-align: center;          /* keep content centered */
+  padding: 2rem 8% 2rem;
   margin: 0 auto;
-  max-width: 2000px;             /* keeps it from stretching too wide on desktop */
+  max-width: 3000px;
+  font-family: "Barlow", sans-serif; /* default font for text */
+  display: flex;               /* align h3 and p in one row */
+  justify-content: center;     /* center horizontally */
+  gap: 0.5rem;                 /* space between h3 and p */
+  flex-wrap: wrap;             /* allows wrapping on mobile */
+  align-items: baseline;       /* aligns p nicely with h3 text */
 }
 
 .video-caption h3 {
-  font-family: "Tondu", sans-serif;
-  font-size: clamp(1.6rem, 4.5vw, 2.4rem);  /* desktop size stays generous */
+  font-family: "Tondu", sans-serif; /* keep h3 in Tondu */
+  font-size: clamp(1.6rem, 4.5vw, 2.4rem);
   letter-spacing: 1px;
-  margin-bottom: 0.8rem;
+  margin: 0;                    /* remove default spacing */
   text-transform: uppercase;
-  line-height: 1.2;             /* slightly tighter for better look */
+  line-height: 1.2;
 }
 
-/* Mobile – much smaller h3 + balanced spacing */
+.video-caption p {
+  font-family: "Barlow", sans-serif; /* ensure p uses Barlow */
+  font-size: clamp(1.6rem, 4.5vw, 2.4rem);
+  margin: 0;                        /* remove default spacing */
+  line-height: 1.4;
+}
+
+/* Mobile – optional adjustments */
 @media (max-width: 768px) {
   .video-caption h3 {
-    font-size: clamp(1.1rem, 3.8vw, 1.35rem);  /* MUCH smaller on mobile */
-    margin-bottom: 0.6rem;
-    line-height: 1.25;
-    letter-spacing: 0.8px;      /* tiny reduction helps compact feel */
+    font-size: clamp(1.1rem, 3.8vw, 1.35rem);
+    letter-spacing: 0.8px;
+  }
+
+  .video-caption p {
+    font-size: clamp(1.1rem, 3.8vw, 1.35rem);
   }
 }
