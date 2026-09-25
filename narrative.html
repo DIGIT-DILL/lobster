@@ -4,151 +4,181 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Narrative Videos – Lobster Thieved</title>
-  <link rel="stylesheet" href="css.css">  <!-- Reuse your existing CSS file -->
-<link rel="preload" href="fonts/tondu.woff2" as="font" type="font/woff2">
-
+  <link rel="stylesheet" href="css.css">
+  <link rel="preload" href="fonts/tondu.woff2" as="font" type="font/woff2" crossorigin>
+ 
   <link rel="icon" type="image/svg+xml" href="content_images/lobster-web-icon.svg">
-
-<!-- Fallback for older browsers -->
-<link rel="icon" type="image/x-icon" href="content_images/lobster-web-icon.svg">
-
-<!-- Apple devices -->
-<link rel="apple-touch-icon" href="content_images/lobster-web-icon.svg">
-
-
-
+  <link rel="apple-touch-icon" href="content_images/lobster-web-icon.svg">
+ 
   <!-- Google Font: Barlow -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-  
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-TFXWYSMF3K"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-TFXWYSMF3K');
-</script>
-
+ 
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TFXWYSMF3K"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-TFXWYSMF3K');
+  </script>
 </head>
-
-
+ 
 <body>
-
-    
-  <!-- Reuse your navbar (copy from index.html) -->
+ 
   <nav>
-    <a href="index.html" class="logo">  <!-- Link back to home -->
+    <a href="index.html" class="logo">
       <img src="content_images/lobster-logo.png" alt="LobsterThieved – Cinematic Production Logo" class="logo-img">
     </a>
     <div class="hamburger" id="hamburger">
       <span></span><span></span><span></span>
     </div>
     <ul class="nav-links" id="nav-links">
-    <li><a href="narrative.html">NARRATIVE</a></li>
-    <li><a href="music-videos.html">MUSIC VIDEOS</a></li>
-    <li><a href="commercial.html">COMMERCIAL</a></li>
-    <li><a href="index.html#about">ABOUT</a></li>
-    <li><a href="index.html#contact">CONTACT</a></li>
+      <li><a href="narrative.html">NARRATIVE</a></li>
+      <li><a href="music-videos.html">MUSIC VIDEOS</a></li>
+      <li><a href="about.html">ABOUT</a></li>
+      <li><a href="index.html#contact">CONTACT</a></li>
     </ul>
   </nav>
-
-
+ 
+  <!-- Mobile-only spacer under the fixed nav -->
   <a class="hero-link mobile-hero-top">
-  <header class="hero">
-    <img
-      src="content_images/black-bar.png"
-      alt=""
-      class="hero-image"
-    >
-  </header>
-</a>
+    <header class="hero">
+      <img src="content_images/black-bar.png" alt="" class="hero-image">
+    </header>
+  </a>
+ 
+  <main class="video-grid-section">
+    <div class="video-grid">
+ 
+      <!-- Video 1 -->
+      <article class="video-card">
+        <a class="video-thumb"
+           href="https://www.youtube.com/watch?v=-a_q8-r18Tc"
+           target="_blank" rel="noopener noreferrer"
+           aria-label="Watch All My Sons on YouTube">
+          <img src="content_images/narrative-all-my-sons.png" alt="Still from All My Sons">
+          <span class="video-thumb-overlay">
+            <svg class="yt-icon" viewBox="0 0 68 48" aria-hidden="true">
+              <path d="M66.5 7.7a8.5 8.5 0 0 0-6-6C55.2.2 34 .2 34 .2S12.8.2 7.5 1.7a8.5 8.5 0 0 0-6 6C0 13 0 24 0 24s0 11 1.5 16.3a8.5 8.5 0 0 0 6 6C12.8 47.8 34 47.8 34 47.8s21.2 0 26.5-1.5a8.5 8.5 0 0 0 6-6C68 35 68 24 68 24s0-11-1.5-16.3z" fill="#fff"/>
+              <path d="M27 34V14l18 10z" fill="#000"/>
+            </svg>
+          </span>
+        </a>
+        <div class="video-card-caption">
+          <h3>All My Sons</h3>
+          <p>Dramatic adaptation of the Arthur Miller play of the same name, starring Rick Zieff and Benjamin Stivale</p>
+        </div>
+      </article>
+ 
+      <!-- Video 2 -->
+      <article class="video-card">
+        <a class="video-thumb"
+           href="https://www.youtube.com/watch?v=bgKbPHyzKsQ"
+           target="_blank" rel="noopener noreferrer"
+           aria-label="Watch Between Doors on YouTube">
+          <img src="content_images/narrative-between-doors.png" alt="Still from Between Doors">
+          <span class="video-thumb-overlay">
+            <svg class="yt-icon" viewBox="0 0 68 48" aria-hidden="true">
+              <path d="M66.5 7.7a8.5 8.5 0 0 0-6-6C55.2.2 34 .2 34 .2S12.8.2 7.5 1.7a8.5 8.5 0 0 0-6 6C0 13 0 24 0 24s0 11 1.5 16.3a8.5 8.5 0 0 0 6 6C12.8 47.8 34 47.8 34 47.8s21.2 0 26.5-1.5a8.5 8.5 0 0 0 6-6C68 35 68 24 68 24s0-11-1.5-16.3z" fill="#fff"/>
+              <path d="M27 34V14l18 10z" fill="#000"/>
+            </svg>
+          </span>
+        </a>
+        <div class="video-card-caption">
+          <h3>Between Doors</h3>
+          <p>A short film directed by Eric Chavez</p>
+        </div>
+      </article>
+ 
+      <!-- Video 3 -->
+      <article class="video-card">
+        <a class="video-thumb"
+           href="https://www.youtube.com/watch?v=WVxCEp0m8Ps"
+           target="_blank" rel="noopener noreferrer"
+           aria-label="Watch Payback on YouTube">
+          <img src="content_images/narrative-payback.png" alt="Still from Payback">
+          <span class="video-thumb-overlay">
+            <svg class="yt-icon" viewBox="0 0 68 48" aria-hidden="true">
+              <path d="M66.5 7.7a8.5 8.5 0 0 0-6-6C55.2.2 34 .2 34 .2S12.8.2 7.5 1.7a8.5 8.5 0 0 0-6 6C0 13 0 24 0 24s0 11 1.5 16.3a8.5 8.5 0 0 0 6 6C12.8 47.8 34 47.8 34 47.8s21.2 0 26.5-1.5a8.5 8.5 0 0 0 6-6C68 35 68 24 68 24s0-11-1.5-16.3z" fill="#fff"/>
+              <path d="M27 34V14l18 10z" fill="#000"/>
+            </svg>
+          </span>
+        </a>
+        <div class="video-card-caption">
+          <h3>PAYBACK</h3>
+          <p>Micro short starring Joseph Olmeda and Joshua Muro</p>
+        </div>
+      </article>
+ 
+      <!-- Video 4 -->
+      <article class="video-card">
+        <a class="video-thumb"
+           href="https://www.youtube.com/watch?v=RFiTMHJ_cSY"
+           target="_blank" rel="noopener noreferrer"
+           aria-label="Watch Scholar of the Bard on YouTube">
+          <img src="content_images/narrative-scholar-of-the-bard.png" alt="Still from Scholar of the Bard">
+          <span class="video-thumb-overlay">
+            <svg class="yt-icon" viewBox="0 0 68 48" aria-hidden="true">
+              <path d="M66.5 7.7a8.5 8.5 0 0 0-6-6C55.2.2 34 .2 34 .2S12.8.2 7.5 1.7a8.5 8.5 0 0 0-6 6C0 13 0 24 0 24s0 11 1.5 16.3a8.5 8.5 0 0 0 6 6C12.8 47.8 34 47.8 34 47.8s21.2 0 26.5-1.5a8.5 8.5 0 0 0 6-6C68 35 68 24 68 24s0-11-1.5-16.3z" fill="#fff"/>
+              <path d="M27 34V14l18 10z" fill="#000"/>
+            </svg>
+          </span>
+        </a>
+        <div class="video-card-caption">
+          <h3>Scholar of the Bard</h3>
+          <p>Dramedy short film starring Autumn Citrine and Logan Levack</p>
+        </div>
+      </article>
+ 
+            <!-- Video 5 -->
+      <article class="video-card">
+        <a class="video-thumb"
+           href="https://www.youtube.com/watch?v=sD5-KIFZRw0"
+           target="_blank" rel="noopener noreferrer"
+           aria-label="Watch Handle With Care">
+          <img src="content_images/narrative-handle-with-care.png" alt="Still from Handle With Care">
+          <span class="video-thumb-overlay">
+            <svg class="yt-icon" viewBox="0 0 68 48" aria-hidden="true">
+              <path d="M66.5 7.7a8.5 8.5 0 0 0-6-6C55.2.2 34 .2 34 .2S12.8.2 7.5 1.7a8.5 8.5 0 0 0-6 6C0 13 0 24 0 24s0 11 1.5 16.3a8.5 8.5 0 0 0 6 6C12.8 47.8 34 47.8 34 47.8s21.2 0 26.5-1.5a8.5 8.5 0 0 0 6-6C68 35 68 24 68 24s0-11-1.5-16.3z" fill="#fff"/>
+              <path d="M27 34V14l18 10z" fill="#000"/>
+            </svg>
+          </span>
+        </a>
+        <div class="video-card-caption">
+          <h3>Handle With Care</h3>
+          <p>Film by Gianni Sacco and Miryam Orozco</p>
+        </div>
+      </article>
+ 
 
-
-<!-- Video 1 -->
-<div class="video-item">
-
-  <div class="video-container">
-<iframe src="https://www.youtube-nocookie.com/embed/-a_q8-r18Tc?si=8kY7D9YJzHS34WMl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-  </div>
-
-  <div class="video-caption">
-    <h3>All My Sons By Zach Miller -</h3>
-    <p>Dramatic adaptation of the Arthur Miller play of the same name , starring Rick zieff and Benjamin Stivale</p>
-  </div>
-
-</div>
-
-
-<!-- Video 2 -->
-<div class="video-item">
-
-  <div class="video-container">
-<iframe src="https://www.youtube.com/embed/bgKbPHyzKsQ?si=Kln1NCoAfwMYLEGX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-  </div>
-
-  <div class="video-caption">
-     <h3>Between Doors -</h3>
-  <p>A short film directed by Eric Chavez</p>
-  </div>
-
-</div>
-
-
-<!-- Video 2 -->
-<div class="video-item">
-
-  <div class="video-container">
-<iframe src="https://www.youtube-nocookie.com/embed/WVxCEp0m8Ps?si=W8iB1GrYplRkVlV6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-  </div>
-
-  <div class="video-caption">
-    <h3>PAYBACK -</h3>
-    <p>Micro short starring Joseph Olmeda and Joshua Muro</p>
-  </div>
-
-</div>
-
-
-<!-- Video 3 -->
-<div class="video-item">
-
-  <div class="video-container">
-<iframe src="https://www.youtube-nocookie.com/embed/RFiTMHJ_cSY?si=0lFtM52inhp9IMAU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-  </div>
-
-  <div class="video-caption">
-    <h3>Scholar of the Bard -</h3>
-    <p>Dramady short film Starring Autumn Citrine and Logan Levack</p>
-  </div>
-
-
-
+    </div>
   </main>
-
-  <!-- Optional: Reuse footer -->
-<footer>
-  <div class="footer-container">
-    <div class="footer-left">
-      <div class="footer-contact">CONTACT: JAMES@LOBSTERTHIEVED.COM</div>
-      <div class="footer-copyright">COPYRIGHT 2026 – LOBSTERTHIEVED</div>
+ 
+  <footer>
+    <div class="footer-container">
+      <div class="footer-left">
+        <div class="footer-contact">CONTACT: JAMES@LOBSTERTHIEVED.COM</div>
+        <div class="footer-copyright">
+        COPYRIGHT 2026 – LOBSTERTHIEVED
+        <span class="footer-divider">•</span>
+        <a href="privacy-policy.html" class="footer-link">PRIVACY POLICY</a>
+      </div>
+      </div>
+ 
+      <div class="footer-right">
+        <a href="https://www.youtube.com/@lobsterthieved" target="_blank" rel="noopener noreferrer">
+          <img src="content_images/yt.png" alt="YouTube" class="social-icon">
+        </a>
+        <a href="https://www.instagram.com/lobsterthieved" target="_blank" rel="noopener noreferrer">
+          <img src="content_images/ig.png" alt="Instagram" class="social-icon">
+        </a>
+      </div>
     </div>
+  </footer>
 
-    <div class="footer-right">
-      <a href="https://www.youtube.com/@lobsterthieved" target="_blank" rel="noopener noreferrer">
-        <img src="content_images/yt.png" alt="YouTube" class="social-icon">
-      </a>
-      <a href="https://www.instagram.com/lobsterthieved" target="_blank" rel="noopener noreferrer">
-        <img src="content_images/ig.png" alt="Instagram" class="social-icon">
-      </a>
-    </div>
-  </div>
-</footer>
-
-  <!-- Hamburger script (copy from your index.html) -->
+ 
   <script>
     const hamburger = document.getElementById('hamburger');
     const navLinks = document.getElementById('nav-links');
@@ -163,6 +193,7 @@
       });
     });
   </script>
-
+ 
 </body>
 </html>
+ 

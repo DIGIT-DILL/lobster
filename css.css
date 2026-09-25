@@ -1044,3 +1044,324 @@ footer {
     font-size: clamp(1.1rem, 3.8vw, 1.35rem);
   }
 }
+
+/* ───────────────────────────────────────────────
+   FEATURE HERO
+──────────────────────────────────────────────── */
+
+/* Desktop: text overlays the left side of the image */
+.feature-hero {
+  position: relative;
+  width: 100%;
+  padding: 0;                    /* overrides the global mobile `section` padding */
+  background: #000;
+  overflow: hidden;
+}
+
+.feature-hero-img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;                  /* image dictates the section height */
+}
+
+.feature-hero-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 60%;                    /* wide enough for "BUILT ON HIGH" on one line */
+  padding: 5% 0 0 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;   /* top-aligned like the mockup */
+  z-index: 2;
+}
+
+.feature-hero-text h2 {
+  font-size: clamp(3rem, 7vw, 8rem);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  line-height: 1.02;
+  font-weight: normal;
+  margin-bottom: 2.5rem;         /* space before the paragraph */
+  color: #fff;
+  white-space: nowrap;           /* guarantees the 2-line break on desktop */
+}
+
+.feature-hero-text p {
+  font-size: clamp(1.2rem, 2.4vw, 2.6rem);
+  line-height: 1.35;
+  color: #eee;
+  max-width: 75%;
+}
+
+/* Mobile: full-width image, text BELOW it on black */
+@media (max-width: 768px) {
+  .feature-hero {
+    padding: 0;
+  }
+
+  .feature-hero-img {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .desktop-br {
+    display: none;               /* let the header wrap naturally */
+  }
+
+  .feature-hero-text {
+    position: static;            /* back into normal flow, under the image */
+    width: 100%;
+    height: auto;
+    padding: 0 6% 3rem;
+    background: #000;
+  }
+
+  .feature-hero-text h2 {
+    font-size: clamp(1.8rem, 7vw, 2.6rem);
+    margin-bottom: 1rem;
+    white-space: normal;
+  }
+
+  .feature-hero-text p {
+    font-size: clamp(1rem, 4vw, 1.2rem);
+    line-height: 1.5;
+    max-width: 100%;
+  }
+}
+
+/* ───────────────────────────────────────────────
+   ABOUT PAGE
+   (uses .about-page classes so it doesn't clash with
+   the #about section styles on your home page)
+──────────────────────────────────────────────── */
+
+.about-page {
+  background: #000;
+  color: #fff;
+  /* top padding clears the fixed nav */
+  padding: 10rem 5% 7rem;
+}
+
+.about-page-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.about-page h1 {
+  font-size: clamp(3.2rem, 7vw, 5.5rem);
+  font-weight: normal;
+  letter-spacing: 1px;
+  line-height: 1;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.about-page p {
+  font-size: clamp(1.1rem, 1.8vw, 1.35rem);
+  line-height: 1.55;
+  color: #eee;
+  max-width: 900px;
+}
+
+/* Desktop / tablet: 2 x 2 grid */
+.about-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 3.5rem;
+}
+
+.about-gallery img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+/* Mobile: single column */
+@media (max-width: 768px) {
+  .about-page {
+    padding: 8rem 6% 5rem;
+  }
+
+  .about-page h1 {
+    font-size: clamp(2.8rem, 13vw, 4rem);
+    margin-bottom: 1rem;
+  }
+
+  .about-page p {
+    font-size: 1.05rem;
+    line-height: 1.5;
+  }
+
+  .about-gallery {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+  }
+}
+
+
+/* ───────────────────────────────────────────────
+   VIDEO GRID (still image + hover overlay)
+   Reusable on narrative, music videos, commercial
+──────────────────────────────────────────────── */
+
+.video-grid-section {
+  background: #000;
+  /* top padding clears the fixed nav on desktop */
+  padding: 9rem 3% 6rem;
+}
+
+.video-grid {
+  max-width: 1600px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 1.5rem;
+  row-gap: 3.5rem;
+}
+
+.video-card {
+  min-width: 0;
+}
+
+/* Still image */
+.video-thumb {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: #111;
+  color: #fff;
+  text-decoration: none;
+}
+
+.video-thumb img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Hover overlay: subtle black silhouette + centered YouTube icon */
+.video-thumb-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.9rem;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.yt-icon {
+  width: clamp(64px, 8vw, 110px);
+  height: auto;
+  opacity: 0.3;               /* 50% transparent at its peak */
+}
+
+.video-thumb:hover .video-thumb-overlay,
+.video-thumb:focus-visible .video-thumb-overlay {
+  opacity: 1;
+}
+
+.video-thumb:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 4px;
+}
+
+/* Caption under each still */
+.video-card-caption {
+  text-align: center;
+  padding-top: 1rem;
+}
+
+.video-card-caption h3 {
+  font-family: "Tondu", sans-serif;
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
+  font-weight: normal;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  line-height: 1.2;
+  margin-bottom: 0.4rem;
+}
+
+.video-card-caption p {
+  font-family: "Barlow", sans-serif;
+  font-size: clamp(0.95rem, 1.3vw, 1.1rem);
+  line-height: 1.4;
+  color: #ccc;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+/* Touch devices have no hover: show the play icon faintly, always */
+@media (hover: none) {
+  .video-thumb-overlay {
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.25);
+  }
+}
+
+/* Mobile / small tablets: single column (stacked) */
+@media (max-width: 900px) {
+  .video-grid-section {
+    padding: 3rem 6% 4rem;     /* the black-bar spacer already clears the nav */
+  }
+
+  .video-grid {
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: 2.5rem;
+  }
+}
+
+
+/* ───────────────────────────────────────────────
+   FOOTER – Privacy Policy link
+──────────────────────────────────────────────── */
+
+.footer-divider {
+  margin: 0 0.6rem;
+  color: #666;
+}
+
+.footer-link {
+  color: #cccccc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover,
+.footer-link:focus {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .footer-divider {
+    margin: 0 0.5rem;
+  }
+}
+
+/* ───────────────────────────────────────────────
+   SECTION DIVIDER
+──────────────────────────────────────────────── */
+
+.section-gap {
+  height: 2rem;
+}
+
+@media (max-width: 768px) {
+  .section-gap {
+    height: 1.5rem;
+  }
+}

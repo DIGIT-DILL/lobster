@@ -4,151 +4,200 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Music Videos – Lobster Thieved</title>
-  <link rel="stylesheet" href="css.css">  <!-- Reuse your existing CSS file -->
-<link rel="preload" href="fonts/tondu.woff2" as="font" type="font/woff2">
-
+  <link rel="stylesheet" href="css.css">
+  <link rel="preload" href="fonts/tondu.woff2" as="font" type="font/woff2" crossorigin>
+ 
   <link rel="icon" type="image/svg+xml" href="content_images/lobster-web-icon.svg">
-
-<!-- Fallback for older browsers -->
-<link rel="icon" type="image/x-icon" href="content_images/lobster-web-icon.svg">
-
-<!-- Apple devices -->
-<link rel="apple-touch-icon" href="content_images/lobster-web-icon.svg">
-
-
-
+  <link rel="apple-touch-icon" href="content_images/lobster-web-icon.svg">
+ 
   <!-- Google Font: Barlow -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-TFXWYSMF3K"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-TFXWYSMF3K');
-</script>
-
-  
+ 
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TFXWYSMF3K"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-TFXWYSMF3K');
+  </script>
 </head>
-
-
+ 
 <body>
-
-    
-  <!-- Reuse your navbar (copy from index.html) -->
+ 
   <nav>
-    <a href="index.html" class="logo">  <!-- Link back to home -->
+    <a href="index.html" class="logo">
       <img src="content_images/lobster-logo.png" alt="LobsterThieved – Cinematic Production Logo" class="logo-img">
     </a>
     <div class="hamburger" id="hamburger">
       <span></span><span></span><span></span>
     </div>
     <ul class="nav-links" id="nav-links">
-    <li><a href="narrative.html">NARRATIVE</a></li>
-    <li><a href="music-videos.html">MUSIC VIDEOS</a></li>
-    <li><a href="commercial.html">COMMERCIAL</a></li>
-    <li><a href="index.html#about">ABOUT</a></li>
-    <li><a href="index.html#contact">CONTACT</a></li>
+      <li><a href="narrative.html">NARRATIVE</a></li>
+      <li><a href="music-videos.html">MUSIC VIDEOS</a></li>
+      <li><a href="about.html">ABOUT</a></li>
+      <li><a href="index.html#contact">CONTACT</a></li>
     </ul>
   </nav>
-
-
+ 
+  <!-- Mobile-only spacer under the fixed nav -->
   <a class="hero-link mobile-hero-top">
-  <header class="hero">
-    <img
-      src="content_images/black-bar.png"
-      alt=""
-      class="hero-image"
-    >
-  </header>
-</a>
+    <header class="hero">
+      <img src="content_images/black-bar.png" alt="" class="hero-image">
+    </header>
+  </a>
+ 
+  <main class="video-grid-section">
+    <div class="video-grid">
+ 
+      <!-- Video 1 -->
+      <article class="video-card">
+        <a class="video-thumb"
+           href="https://www.youtube.com/watch?v=rtaE11y4rz0"
+           target="_blank" rel="noopener noreferrer"
+           aria-label="Watch Your Code on YouTube">
+          <img src="content_images/music-video-your-code.png" alt="Still from Your Code">
+          <span class="video-thumb-overlay">
+            <svg class="yt-icon" viewBox="0 0 68 48" aria-hidden="true">
+              <path d="M66.5 7.7a8.5 8.5 0 0 0-6-6C55.2.2 34 .2 34 .2S12.8.2 7.5 1.7a8.5 8.5 0 0 0-6 6C0 13 0 24 0 24s0 11 1.5 16.3a8.5 8.5 0 0 0 6 6C12.8 47.8 34 47.8 34 47.8s21.2 0 26.5-1.5a8.5 8.5 0 0 0 6-6C68 35 68 24 68 24s0-11-1.5-16.3z" fill="#fff"/>
+              <path d="M27 34V14l18 10z" fill="#000"/>
+            </svg>
+          </span>
+        </a>
+        <div class="video-card-caption">
+          <h3>"Your Code"</h3>
+          <p>Sophie Grey</p>
+        </div>
+      </article>
+ 
+      <!-- Video 2 -->
+      <article class="video-card">
+        <a class="video-thumb"
+           href="https://www.youtube.com/watch?v=aV_QtcIdKGI"
+           target="_blank" rel="noopener noreferrer"
+           aria-label="Watch Growing Up on YouTube">
+          <img src="content_images/music-video-growing-up.png" alt="Still from Growing Up">
+          <span class="video-thumb-overlay">
+            <svg class="yt-icon" viewBox="0 0 68 48" aria-hidden="true">
+              <path d="M66.5 7.7a8.5 8.5 0 0 0-6-6C55.2.2 34 .2 34 .2S12.8.2 7.5 1.7a8.5 8.5 0 0 0-6 6C0 13 0 24 0 24s0 11 1.5 16.3a8.5 8.5 0 0 0 6 6C12.8 47.8 34 47.8 34 47.8s21.2 0 26.5-1.5a8.5 8.5 0 0 0 6-6C68 35 68 24 68 24s0-11-1.5-16.3z" fill="#fff"/>
+              <path d="M27 34V14l18 10z" fill="#000"/>
+            </svg>
+          </span>
+        </a>
+        <div class="video-card-caption">
+          <h3>"Growing Up"</h3>
+          <p>One Outta Ten</p>
+        </div>
+      </article>
+ 
+      <!-- Video 3 -->
+      <article class="video-card">
+        <a class="video-thumb"
+           href="https://www.youtube.com/watch?v=qrG2JAkVTts"
+           target="_blank" rel="noopener noreferrer"
+           aria-label="Watch Without Me on YouTube">
+          <img src="content_images/music-video-without-me.png" alt="Still from Without Me">
+          <span class="video-thumb-overlay">
+            <svg class="yt-icon" viewBox="0 0 68 48" aria-hidden="true">
+              <path d="M66.5 7.7a8.5 8.5 0 0 0-6-6C55.2.2 34 .2 34 .2S12.8.2 7.5 1.7a8.5 8.5 0 0 0-6 6C0 13 0 24 0 24s0 11 1.5 16.3a8.5 8.5 0 0 0 6 6C12.8 47.8 34 47.8 34 47.8s21.2 0 26.5-1.5a8.5 8.5 0 0 0 6-6C68 35 68 24 68 24s0-11-1.5-16.3z" fill="#fff"/>
+              <path d="M27 34V14l18 10z" fill="#000"/>
+            </svg>
+          </span>
+        </a>
+        <div class="video-card-caption">
+          <h3>"Without Me"</h3>
+          <p>Vintri Hill</p>
+        </div>
+      </article>
+ 
+      <!-- Video 4 -->
+      <article class="video-card">
+        <a class="video-thumb"
+           href="https://www.youtube.com/watch?v=INxn09kHBh4"
+           target="_blank" rel="noopener noreferrer"
+           aria-label="Watch Mister Right Now on YouTube">
+          <img src="content_images/music-video-mr-right-now.png" alt="Still from Mister Right Now">
+          <span class="video-thumb-overlay">
+            <svg class="yt-icon" viewBox="0 0 68 48" aria-hidden="true">
+              <path d="M66.5 7.7a8.5 8.5 0 0 0-6-6C55.2.2 34 .2 34 .2S12.8.2 7.5 1.7a8.5 8.5 0 0 0-6 6C0 13 0 24 0 24s0 11 1.5 16.3a8.5 8.5 0 0 0 6 6C12.8 47.8 34 47.8 34 47.8s21.2 0 26.5-1.5a8.5 8.5 0 0 0 6-6C68 35 68 24 68 24s0-11-1.5-16.3z" fill="#fff"/>
+              <path d="M27 34V14l18 10z" fill="#000"/>
+            </svg>
+          </span>
+        </a>
+        <div class="video-card-caption">
+          <h3>"Mister Right Now"</h3>
+          <p>Patrick Sargent</p>
+        </div>
+      </article>
 
+      <!-- Video 5 -->
+      <article class="video-card">
+        <a class="video-thumb"
+           href="https://www.youtube.com/watch?v=7C1pCYlhrRQ"
+           target="_blank" rel="noopener noreferrer"
+           aria-label="Watch Cyberspace on YouTube">
+          <img src="content_images/music-video-cyberspace.png" alt="Still from Cyberspace">
+          <span class="video-thumb-overlay">
+            <svg class="yt-icon" viewBox="0 0 68 48" aria-hidden="true">
+              <path d="M66.5 7.7a8.5 8.5 0 0 0-6-6C55.2.2 34 .2 34 .2S12.8.2 7.5 1.7a8.5 8.5 0 0 0-6 6C0 13 0 24 0 24s0 11 1.5 16.3a8.5 8.5 0 0 0 6 6C12.8 47.8 34 47.8 34 47.8s21.2 0 26.5-1.5a8.5 8.5 0 0 0 6-6C68 35 68 24 68 24s0-11-1.5-16.3z" fill="#fff"/>
+              <path d="M27 34V14l18 10z" fill="#000"/>
+            </svg>
+          </span>
+        </a>
+        <div class="video-card-caption">
+          <h3>"Cyberspace"</h3>
+          <p>Sophie Grey</p>
+        </div>
+      </article>
 
-<!-- Video 1 -->
-<div class="video-item">
-
-  <div class="video-container">
-<iframe src="https://www.youtube-nocookie.com/embed/rtaE11y4rz0?si=9WeaeFY23oEczyoq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-  </div>
-
-  <div class="video-caption">
-    <h3>“Your Code” -</h3>
-    <p>Sophie Grey </p>
-  </div>
-
-</div>
-
-
-
-<!-- Video 2 -->
-<div class="video-item">
-
-  <div class="video-container">
-<iframe src="https://www.youtube.com/embed/aV_QtcIdKGI?si=niaZ-tHN_ip2f8l_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> 
-  </div>
-
-  <div class="video-caption">
-    <h3>“Growing Up” -</h3>
-    <p>One Outta Ten</p>
-  </div>
-
-
-
-<!-- Video 3 -->
-<div class="video-item">
-
-  <div class="video-container">
-<iframe src="https://www.youtube-nocookie.com/embed/qrG2JAkVTts?si=Ta5tC4UNS8Ve5rpV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>   
-  </div>
-
-  <div class="video-caption">
-    <h3>“Without Me” -</h3>
-    <p>Vintri Hill</p>
-  </div>
-
-</div>
-
-
-  <!-- Video 4 -->
-<div class="video-item">
-
-  <div class="video-container">
-<iframe src="https://www.youtube.com/embed/INxn09kHBh4?si=R0PRbnTW3nn1_yd3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-  </div>
-
-  <div class="video-caption">
-    <h3>“Mister Right Now” -</h3>
-    <p>“Patrick Sargent</p>
-  </div>
-
-
-</div>
-
-  <!-- Optional: Reuse footer -->
-<footer>
-  <div class="footer-container">
-    <div class="footer-left">
-      <div class="footer-contact">CONTACT: JAMES@LOBSTERTHIEVED.COM</div>
-      <div class="footer-copyright">COPYRIGHT 2026 – LOBSTERTHIEVED</div>
+      <!-- Video 6 -->
+      <article class="video-card">
+        <a class="video-thumb"
+           href="https://www.youtube.com/watch?v=6NUgy8Jjar0"
+           target="_blank" rel="noopener noreferrer"
+           aria-label="Watch Faces on YouTube">
+          <img src="content_images/music-video-faces.png" alt="Still from Faces">
+          <span class="video-thumb-overlay">
+            <svg class="yt-icon" viewBox="0 0 68 48" aria-hidden="true">
+              <path d="M66.5 7.7a8.5 8.5 0 0 0-6-6C55.2.2 34 .2 34 .2S12.8.2 7.5 1.7a8.5 8.5 0 0 0-6 6C0 13 0 24 0 24s0 11 1.5 16.3a8.5 8.5 0 0 0 6 6C12.8 47.8 34 47.8 34 47.8s21.2 0 26.5-1.5a8.5 8.5 0 0 0 6-6C68 35 68 24 68 24s0-11-1.5-16.3z" fill="#fff"/>
+              <path d="M27 34V14l18 10z" fill="#000"/>
+            </svg>
+          </span>
+        </a>
+        <div class="video-card-caption">
+          <h3>"Faces"</h3>
+          <p>Brady Young</p>
+        </div>
+      </article>
+ 
     </div>
-
-    <div class="footer-right">
-      <a href="https://www.youtube.com/@lobsterthieved" target="_blank" rel="noopener noreferrer">
-        <img src="content_images/yt.png" alt="YouTube" class="social-icon">
-      </a>
-      <a href="https://www.instagram.com/lobsterthieved" target="_blank" rel="noopener noreferrer">
-        <img src="content_images/ig.png" alt="Instagram" class="social-icon">
-      </a>
+  </main>
+ 
+  <footer>
+    <div class="footer-container">
+      <div class="footer-left">
+        <div class="footer-contact">CONTACT: JAMES@LOBSTERTHIEVED.COM</div>
+        <div class="footer-copyright">
+        COPYRIGHT 2026 – LOBSTERTHIEVED
+        <span class="footer-divider">•</span>
+        <a href="privacy-policy.html" class="footer-link">PRIVACY POLICY</a>
+      </div>
+      </div>
+ 
+      <div class="footer-right">
+        <a href="https://www.youtube.com/@lobsterthieved" target="_blank" rel="noopener noreferrer">
+          <img src="content_images/yt.png" alt="YouTube" class="social-icon">
+        </a>
+        <a href="https://www.instagram.com/lobsterthieved" target="_blank" rel="noopener noreferrer">
+          <img src="content_images/ig.png" alt="Instagram" class="social-icon">
+        </a>
+      </div>
     </div>
-  </div>
-</footer>
+  </footer>
 
-  <!-- Hamburger script (copy from your index.html) -->
+ 
   <script>
     const hamburger = document.getElementById('hamburger');
     const navLinks = document.getElementById('nav-links');
@@ -163,6 +212,6 @@
       });
     });
   </script>
-
+ 
 </body>
 </html>

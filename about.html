@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About | Lobster Thieved</title>
+  <link rel="stylesheet" href="css.css">
+  <link rel="preload" href="fonts/tondu.woff2" as="font" type="font/woff2" crossorigin>
+ 
+  <link rel="icon" type="image/svg+xml" href="content_images/lobster-web-icon.svg">
+  <link rel="apple-touch-icon" href="content_images/lobster-web-icon.svg">
+ 
+  <!-- Google Font: Barlow -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+ 
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TFXWYSMF3K"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-TFXWYSMF3K');
+  </script>
+</head>
+ 
+<body>
+<div id="top"></div>
+ 
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="logo">
+    <img src="content_images/lobster-logo.png" alt="LobsterThieved – Cinematic Production Logo" class="logo-img">
+  </a>
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="narrative.html">NARRATIVE</a></li>
+    <li><a href="music-videos.html">MUSIC VIDEOS</a></li>
+    <li><a href="about.html">ABOUT</a></li>
+    <li><a href="#contact">CONTACT</a></li>
+  </ul>
+</nav>
+ 
+<!-- ABOUT CONTENT -->
+<main class="about-page">
+  <div class="about-page-inner">
+    <h1>ABOUT</h1>
+ 
+    <p>
+      Hello! my name is James McEntee, I'm the founder of Lobster Thieved and a full-time Director of Photography, currently based in Los Angeles & NY. With years of experience from dozens of productions between New York and Los Angeles, I am ready to deliver high-quality professional results for your next project. My work ranges from commercials, music videos, and feature length narrative productions. I am here to make your shoot run smoothly, look awesome, and match your vision. 
+    </p>
+
+<div class="section-gap"></div>
+    <p>Take advantage of the full cinema camera, lenses & lighting package provided on any project you book. If you need crew, Lobster Thieved has a shortlist of very talented Camera and G&E crew ready to join the project.</p>
+ 
+    <!-- 2x2 on desktop/tablet, single column on mobile -->
+    <div class="about-gallery">
+      <img src="content_images/about-1.png" alt="Behind the scenes still 1">
+      <img src="content_images/about-2.png" alt="Behind the scenes still 2">
+      <img src="content_images/about-3.png" alt="Behind the scenes still 3">
+      <img src="content_images/about-4.png" alt="Behind the scenes still 4">
+    </div>
+  </div>
+</main>
+ 
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact-overlay"></div>
+  <img
+    src="content_images/boxing.png"
+    alt="Friends hanging out at night"
+    class="contact-bg"
+  >
+  <div class="contact-content">
+    <h2>LETS GET TO WORK:</h2>
+    <form action="https://formsubmit.co/35573a473a5e1b520b6608e90f0dc37f" method="POST">
+ 
+      <!-- Prevent spam -->
+      <input type="hidden" name="_captcha" value="false">
+ 
+      <!-- Redirect after submit -->
+      <input type="hidden" name="_next" value="https://lobsterthieved.com">
+ 
+      <input type="text" name="name" placeholder="Name" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <textarea name="message" rows="4" placeholder="Message" required></textarea>
+ 
+      <button type="submit">SUBMIT</button>
+    </form>
+    <a href="#top" class="back-to-top">
+      ▲ BACK TO TOP
+    </a>
+  </div>
+</section>
+ 
+  <footer>
+    <div class="footer-container">
+      <div class="footer-left">
+        <div class="footer-contact">CONTACT: JAMES@LOBSTERTHIEVED.COM</div>
+        <div class="footer-copyright">
+        COPYRIGHT 2026 – LOBSTERTHIEVED
+        <span class="footer-divider">•</span>
+        <a href="privacy-policy.html" class="footer-link">PRIVACY POLICY</a>
+      </div>
+      </div>
+ 
+      <div class="footer-right">
+        <a href="https://www.youtube.com/@lobsterthieved" target="_blank" rel="noopener noreferrer">
+          <img src="content_images/yt.png" alt="YouTube" class="social-icon">
+        </a>
+        <a href="https://www.instagram.com/lobsterthieved" target="_blank" rel="noopener noreferrer">
+          <img src="content_images/ig.png" alt="Instagram" class="social-icon">
+        </a>
+      </div>
+    </div>
+  </footer>
+
+ 
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('nav-links');
+ 
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    hamburger.classList.toggle('active');
+  });
+ 
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('active');
+      hamburger.classList.remove('active');
+    });
+  });
+</script>
+ 
+</body>
+</html>
+ 
