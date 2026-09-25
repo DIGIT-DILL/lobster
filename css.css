@@ -1096,7 +1096,6 @@ footer {
   max-width: 75%;
 }
 
-/* Mobile: full-width image, text ABOVE it on black */
 @media (max-width: 768px) {
   .feature-hero {
     padding: 0;
@@ -1105,26 +1104,27 @@ footer {
   }
 
   .feature-hero > picture {
-    order: 2;                    /* image sits after the text */
+    order: 2;
   }
 
   .feature-hero-img {
     width: 100%;
     max-width: 100%;
-    order: 2;                    /* redundant safety in case img is treated as the flex item */
+    order: 2;
   }
 
   .desktop-br {
-    display: none;               /* let the header wrap naturally */
+    display: none;
   }
 
   .feature-hero-text {
-    position: static;            /* back into normal flow, above the image */
+    position: static;
     width: 100%;
     height: auto;
-    padding: 3rem 6% 1.5rem;     /* space below text, none needed above now */
+    padding: 3rem 6% 1.5rem;
     background: #000;
-    order: 1;                    /* text sits first */
+    order: 1;
+    text-align: center;          /* centers h2 and p */
   }
 
   .feature-hero-text h2 {
@@ -1137,6 +1137,8 @@ footer {
     font-size: clamp(1rem, 4vw, 1.2rem);
     line-height: 1.5;
     max-width: 100%;
+    margin-left: auto;           /* keeps it centered if max-width is ever reduced */
+    margin-right: auto;
   }
 }
 /* ───────────────────────────────────────────────
